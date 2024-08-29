@@ -87,7 +87,7 @@ fn main(@builtin(global_invocation_id) invocation_id: vec3<u32>) {
 
             let d = distance(p_world_pose, sample_world_pose);
             let x = distance(p_sample, base_probe_sample);
-            let g =  gauss(d); // gauss(x) * gauss(d);
+            let g =  gauss(x); // gauss(x) * gauss(d);
 
             total_q += p_sample * g;
             total_w += g;
